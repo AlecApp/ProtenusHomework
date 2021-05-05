@@ -38,7 +38,7 @@ This will allow you to access the container through `127.0.0.1:MY_PORT_NUMBER` i
 
 * Note that you do not need to make any modifications to the Dockerfile or rebuild the container.
 * Note that the selected port must be available for use.
-    - On Linux, you can view which ports are already consumed by running `sudo lsof -i -P -n | grep LISTEN`.
+    - On Linux, you can view which ports are already consumed by running `sudo lsof -i -P -n | grep LISTEN`
 * Note that this will **not** stop any identical containers that were published to different ports!
 
 
