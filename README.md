@@ -1,6 +1,6 @@
 # How to Run the Docker Container
 1. From your local CLI, run `git clone https://github.com/AlecApp/ProtenusHomework.git`
-2. Change into the newly downloaded `ProtenusHomework` directory (i.e. where the downloaded Dockerfile is.)
+2. Change into the newly downloaded `ProtenusHomework` directory (i.e. where the Dockerfile is.)
 3. Run the following command: `docker build . -t protenus:latest` and wait for the container to be built.
 4. Once the container has been built, run the following command: `docker run -p 8080:80 protenus:latest`.
     - Note that you can use any of your system's available ports in place of `8080`.
