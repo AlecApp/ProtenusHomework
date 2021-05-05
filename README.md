@@ -20,8 +20,10 @@ docker stop CONTAINER_ID
 Note, if you wish to stop **all** running containers, you can use the command `docker stop $(docker ps -q)` instead.
 
 Once your container is stopped, run the following commands:
-1. `docker container prune` (press `y` when prompted)
-2. `docker image prune -a` (press `y` when prompted)
+```
+docker container prune (press `y` when prompted)
+docker image prune -a (press `y` when prompted)
+```
 
 
 ## Modifying the Container
