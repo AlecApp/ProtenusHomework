@@ -22,7 +22,10 @@ Once your container is stopped, run the following commands:
 ## Modifying the Container
 
 ### Publishing the container on a different port e.g. `8081`
-To publish the container on a different port, run the following command: `docker run -p MY_PORT_NUMBER:80 protenus:latest`
+To publish the container on a different port, run the following command:
+```
+docker run -p MY_PORT_NUMBER:80 protenus:latest
+```
 - `MY_PORT_NUMBER` is the port of your choosing e.g. `docker run -p 8081:80 protenus:latest`
 
 This will allow you to access the container through `127.0.0.1:MY_PORT_NUMBER` in your web browser.
