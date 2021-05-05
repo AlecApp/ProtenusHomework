@@ -1,8 +1,8 @@
 ## How to Run the Docker Container
 1. From your local CLI, run **`git clone https://github.com/AlecApp/ProtenusHomework.git`**
 2. Change into the newly downloaded `ProtenusHomework` directory (i.e. where the Dockerfile is.)
-3. Run the following command: `docker build . -t protenus:latest` and wait for the container to be built.
-4. Once the container has been built, run the following command: `docker run -p 8080:80 protenus:latest`
+3. Run the following command: **`docker build . -t protenus:latest`** and wait for the container to be built.
+4. Once the container has been built, run the following command: **`docker run -p 8080:80 protenus:latest`**
     - Note that you can use any of your system's available ports in place of `8080`
 5. You can view the running container by visiting `127.0.0.1:8080` in your web browser.
 6. When you're ready to stop the container, return to the CLI window and press `CTRL+C` to terminate the process.
@@ -11,8 +11,13 @@
 ## Cleanup
 Before attempting to remove the container, make sure it is not currently running. You can view running containers with the `docker ps` command.
 
-If your container is currently running you can stop it with the following command: `docker stop CONTAINER_ID` where `CONTAINER_ID` is the container ID shown by `docker ps`.
-*Note, if you wish to stop **all** running containers, you can use the command `docker stop $(docker ps -q)` instead.*
+If your container is currently running you can stop it with the following command:
+```
+docker stop CONTAINER_ID
+```
+*`CONTAINER_ID` is the container ID shown by `docker ps`*
+
+Note, if you wish to stop **all** running containers, you can use the command `docker stop $(docker ps -q)` instead.
 
 Once your container is stopped, run the following commands:
 1. `docker container prune` (press `y` when prompted)
