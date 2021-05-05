@@ -24,7 +24,6 @@ Once your container is stopped, run the following commands:
 docker container prune 
 docker image prune -a
 ```
-*(press `y` when prompted)*
 
 ## Modifying the Container
 
@@ -39,13 +38,17 @@ This will allow you to access the container through `127.0.0.1:MY_PORT_NUMBER` i
 
 * Note that you do not need to make any modifications to the Dockerfile or rebuild the container.
 * Note that the selected port must be available for use.
-    - If you're running Linux (or Mac OSX?), you can view which ports are already consumed by running `sudo lsof -i -P -n | grep LISTEN`.
+    - On Linux (and Mac?), you can view which ports are already consumed by running `sudo lsof -i -P -n | grep LISTEN`.
 * Note that this will **not** stop any identical containers that were published to different ports!
 
 
 ### Using your own content for index.html
 Any valid HTML code/file can be used as the container's homepage.
 
-To use your own HTML file, remove the `RUN echo ...` statement in the Dockerfile and uncomment the `ADD MY_HTML_FILE ...` statement. Make sure to replace the `MY_HTML_FILE` with the filepath of your HTML file relative to the Dockerfile's directory e.g. `ADD my_html_file.html ...` or `ADD /src/my_html_file.html ...`.
+To use your own HTML file...
+1. Remove (or comment out) the `RUN echo ...` statement in the Dockerfile
+2. Uncomment the `ADD MY_HTML_FILE ...` statement in the Dockerfile.
+
+Make sure to replace `MY_HTML_FILE` with the filepath of your HTML file relative to the Dockerfile's directory e.g. `ADD my_html_file.html ...` or `ADD /src/my_html_file.html ...`.
 
 Once done, you must rebuild & run the modified container (using the steps under "How to Run the Docker Container") before your changes will be visible.
